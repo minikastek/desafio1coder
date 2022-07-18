@@ -25,9 +25,9 @@ export const Navbar = () => {
             <Button label='Sellados'/> 
         </div>
 
-        {/* <div>
+        <div>
             <CartWidget/>
-        </div> */}
+        </div>
 
         {/* <div>
             <button 

@@ -9,7 +9,7 @@ function App() {
       <header className="App-header">
         <Navbar/>
         {/* <Counter/> */}
-        {/* <ItemListContainer greetings="Hola Profe"/> */}
+        <ItemListContainer greetings="Hola Profe"/>
         <h1>Momento ofertas !</h1>
       </header>
     </div>
