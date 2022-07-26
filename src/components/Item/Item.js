@@ -7,6 +7,12 @@ export const Item = ({products,}) => {
 
     let stock = products.stock;
 
+    const handleOnAdd = (count) => {
+        if(count==!0){
+            console.log(`La cantidad agregada es : ${count} `)
+        }
+      }
+
     return (
         <li>
             <div className="box">
@@ -19,7 +25,7 @@ export const Item = ({products,}) => {
                         alignItems: 'center',
                     }}
                 />
-                <Counter stock={stock}/>
+                <Counter stock={stock} onAdd={handleOnAdd}/>
             </div>
         </li>
     )

@@ -5,8 +5,8 @@ import { ItemListContainer } from './components/ItemListContainer/ItemListContai
 
 function App() {
 
-  const handleOnAdd = (quantity) => {
-    console.log(`La cantidad agregada es : ${quantity} `)
+  const handleOnAdd = (count) => {
+    console.log(`La cantidad agregada es : ${count} `)
   }
 
   return (
