@@ -9,7 +9,6 @@ export const CartWidget = () => {
             src={carrito} 
             style={{width: 50}} 
         />
-
         <h6 className='contador'>5</h6>
     </div>
   )
