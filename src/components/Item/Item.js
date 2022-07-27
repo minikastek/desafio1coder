@@ -3,9 +3,16 @@ import { Counter } from "../Counter/Counter"
 
 import './Item.css'
 
-export const Item = ({products, onAdd}) => {
+export const Item = ({products}) => {
 
     let stock = products.stock;
+
+    const handleOnAdd = (count) => {
+
+        if(count > 0 ){
+          console.log(`La cantidad agregada es : ${count} `)
+        }
+      }
 
     return (
         <li>
@@ -20,7 +27,7 @@ export const Item = ({products, onAdd}) => {
                     }}
                 />
                 <h3>$ {products.price}</h3>
-                <Counter stock={stock} onAdd={onAdd} initial={2}/>
+                <Counter stock={stock} onAdd={handleOnAdd} initial={1}/>
             </div>
         </li>
     )

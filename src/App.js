@@ -17,7 +17,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <Navbar/>
-        <ItemListContainer greetings="Hola Profe" onAdd={handleOnAdd}/>
+        <ItemListContainer greetings="Hola Profe"/>
         <Counter stock={10} onAdd={handleOnAdd} initial={1}/>
         <h1>Momento ofertas !</h1>
       </header>
