@@ -2,9 +2,9 @@ import React from 'react'
 import { useState } from 'react'
 import './Counter.css'
 
-export const Counter = ({stock, onAdd}) => {
+export const Counter = ({stock, onAdd, initial}) => {
 
-    const [count, setCount] = useState(1)
+    const [count, setCount] = useState(initial)
 
     // const [title, setTitle] = useState('hola')
 

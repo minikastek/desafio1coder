@@ -3,7 +3,7 @@ import { Counter } from "../Counter/Counter"
 
 import './Item.css'
 
-export const Item = ({products,}) => {
+export const Item = ({products, onAdd}) => {
 
     let stock = products.stock;
 
@@ -19,7 +19,8 @@ export const Item = ({products,}) => {
                         alignItems: 'center',
                     }}
                 />
-                <Counter stock={stock}/>
+                <h3>$ {products.price}</h3>
+                <Counter stock={stock} onAdd={onAdd} initial={2}/>
             </div>
         </li>
     )
