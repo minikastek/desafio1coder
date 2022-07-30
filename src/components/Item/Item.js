@@ -28,6 +28,7 @@ export const Item = ({products}) => {
                 />
                 <h3>$ {products.price}</h3>
                 <Counter stock={stock} onAdd={handleOnAdd} initial={1}/>
+                {/* <link to='/detail'>Ver Detalle</link>  */}
             </div>
         </li>
     )

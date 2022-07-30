@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button } from '../Button/Button';
 import { CartWidget } from '../CartWidget/CartWidget';
+import { Link } from 'react-router-dom'
 import './Navbar.css';
 import name from "../../Assets/Name.png";
 
@@ -19,10 +20,10 @@ export const Navbar = () => {
         </div>
 
         <div className="buttonList">
-            <Button handleClick={handleClick} label='Cartas'/>
-            <Button label='Carpetas'/>
-            <Button label='Deckbox'/> 
-            <Button label='Sellados'/> 
+            <Link to='/category/singles' handleClick={handleClick}className='btn btn-primary'>Singles</Link>
+            <Link to='/category/carpetas' className='btn btn-primary'>Carpetas</Link>
+            <Link to='/category/deckbox' className='btn btn-primary'>Deckbox</Link>
+            <Link to='/category/sealed' className='btn btn-primary'>Sellado</Link>
         </div>
 
         <div>
