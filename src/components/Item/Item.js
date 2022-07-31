@@ -28,7 +28,7 @@ export const Item = ({products}) => {
                     }}
                 />
                 <h3>$ {products.price}</h3>
-                <Link to={`/detail/${products.id}`}>Ver detalle</Link>
+                <Link to={`/item/${products.id}`}>Ver detalle</Link>
                 {/* <Counter stock={stock} onAdd={handleOnAdd} initial={1}/> */}
                 {/* <link to='/detail'>Ver Detalle</link>  */}
             </div>

@@ -1,29 +1,30 @@
 import './ItemListContainer.css'
 import React, { useEffect, useState } from 'react'
 import { ItemList } from '../itemList/ItemList'
-import {getProductsDeAlfredo} from '../../AsyncMoc.js'
+import {getProductsDeAlfredo, getProductsByCategory} from '../../AsyncMoc.js'
+import { useParams } from 'react-router-dom'
 
 export const ItemListContainer = ({greetings}) => {
 
-  const [products, setproducts] = useState([])
-  
-  console.log(products)
+  const [products, setProducts] = useState([])
+
+  const {categoryId} = useParams()
 
   useEffect(() => {
-    getProductsDeAlfredo().then(products => {
-      setproducts(products)
-    })
-    
-  }, [])
+    const asyncFunction = categoryId ? getProductsByCategory : getProductsDeAlfredo
+
+    asyncFunction(categoryId).then(product=>{
+        setProducts(product)
+      }).catch(error=>{
+        console.log(error)
+      })
+  }, [categoryId])
   
   // const productsComp = products.map(prod=> <li key={prod.id}>{prod.name}</li>)
+
   return (
     <div>
         <h1>{greetings}</h1>
-        {/* <ul>
-          {productsComp}
-          {products.map(prod=> <li key={prod.id}>{prod.name}</li>)}
-        </ul> */}
         <ItemList products={products}/>
     </div>
   )

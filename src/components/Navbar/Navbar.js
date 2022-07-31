@@ -22,10 +22,18 @@ export const Navbar = () => {
         </div>
 
         <div className="buttonList">
-            <Link to='/category/singles' path="" className='btn btn-primary'>Singles</Link>
-            <Link to='/category/carpetas' path="" className='btn btn-primary'>Carpetas</Link>
-            <Link to='/category/deckbox' path="" className='btn btn-primary'>Deckbox</Link>
-            <Link to='/category/sealed' path="" className='btn btn-primary'>Sellado</Link>
+            <Link to='/category/singles'>
+                <button>Singles</button>
+            </Link>
+            <Link to='/category/carpetas'>
+                <button>Carpetas</button>
+            </Link>
+            <Link to='/category/deckbox'>
+                <button>Deckbox</button>
+            </Link>
+            <Link to='/category/sealed'>
+                <button>Sellado</button>
+            </Link>
         </div>
 
         <div>
