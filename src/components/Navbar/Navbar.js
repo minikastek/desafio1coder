@@ -16,14 +16,16 @@ export const Navbar = () => {
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
         
         <div className="navbar-brand" style={{paddingLeft: 10}}>
-            <img src={name} className="logo"/>
+            <Link to="/">
+                <img src={name} className="logo"/>
+            </Link>
         </div>
 
         <div className="buttonList">
-            <Link to='/category/singles' handleClick={handleClick}className='btn btn-primary'>Singles</Link>
-            <Link to='/category/carpetas' className='btn btn-primary'>Carpetas</Link>
-            <Link to='/category/deckbox' className='btn btn-primary'>Deckbox</Link>
-            <Link to='/category/sealed' className='btn btn-primary'>Sellado</Link>
+            <Link to='/category/singles' path="" className='btn btn-primary'>Singles</Link>
+            <Link to='/category/carpetas' path="" className='btn btn-primary'>Carpetas</Link>
+            <Link to='/category/deckbox' path="" className='btn btn-primary'>Deckbox</Link>
+            <Link to='/category/sealed' path="" className='btn btn-primary'>Sellado</Link>
         </div>
 
         <div>

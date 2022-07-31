@@ -7,21 +7,27 @@ export const ItemDetailContainer = () => {
 
     const [product, setProduct] = useState();
 
-    // const {productId} = useParams();
-    const {categoryId} = useParams();
+    const {productId} = useParams();
+    // const {categoryId} = useParams();
+
+     useEffect(() => {
+         getProductsById(productId)
+             .then(product => {
+                 setProduct (product)
+             }).catch(error =>{
+                 console.log(error)
+             })
+     }, [])
 
     // useEffect(() => {
-    //     getProductsById(productId)
-    //         .then(product => {
-    //             setProduct (product)
-    //         }).catch(error =>{
-    //             console.log(error)
-    //         })
-    // }, [])
+    //     const asyncFunction = categoryId ? getProductsByCategory : getProductsDeAlfredo
 
-    useEffect(() => {
-        const asyncFunction = categoryId ? getProductsByCategory: getProductsDeAlfredo
-    }, [])
+    //     asyncFunction(categoryId).then(product=>{
+    //       setProduct(product)
+    //     }).catch(error=>{
+    //       console.log(error)
+    //     })
+    // }, [categoryId])
     
   return (
     <div>

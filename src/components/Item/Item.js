@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "react-router-dom";
 import { Counter } from "../Counter/Counter"
 
 import './Item.css'
@@ -27,7 +28,8 @@ export const Item = ({products}) => {
                     }}
                 />
                 <h3>$ {products.price}</h3>
-                <Counter stock={stock} onAdd={handleOnAdd} initial={1}/>
+                <Link to={`/detail/${products.id}`}>Ver detalle</Link>
+                {/* <Counter stock={stock} onAdd={handleOnAdd} initial={1}/> */}
                 {/* <link to='/detail'>Ver Detalle</link>  */}
             </div>
         </li>

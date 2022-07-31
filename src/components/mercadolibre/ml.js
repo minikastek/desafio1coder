@@ -5,6 +5,7 @@ export const ml = () => {
 
     const [products, setProducts] = useState([])
     const [input, setInput] = useState('')
+    const [loading, setLoading] = useState(false)
 
     // useEffect(() => {
     //   fetch('https://api.mercadolibre.com/sites/MLA/search?q=auto')
