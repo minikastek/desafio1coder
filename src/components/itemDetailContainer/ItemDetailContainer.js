@@ -8,7 +8,6 @@ export const ItemDetailContainer = () => {
     const [product, setProduct] = useState();
 
     const {productId} = useParams();
-    // const {categoryId} = useParams();
 
      useEffect(() => {
          getProductsById(productId)
@@ -19,16 +18,6 @@ export const ItemDetailContainer = () => {
              })
      }, [])
 
-    // useEffect(() => {
-    //     const asyncFunction = categoryId ? getProductsByCategory : getProductsDeAlfredo
-
-    //     asyncFunction(categoryId).then(product=>{
-    //       setProduct(product)
-    //     }).catch(error=>{
-    //       console.log(error)
-    //     })
-    // }, [categoryId])
-    
   return (
     <div>
         <h1>Detalle</h1>

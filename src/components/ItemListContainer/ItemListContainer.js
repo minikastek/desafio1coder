@@ -19,8 +19,6 @@ export const ItemListContainer = ({greetings}) => {
         console.log(error)
       })
   }, [categoryId])
-  
-  // const productsComp = products.map(prod=> <li key={prod.id}>{prod.name}</li>)
 
   return (
     <div>

@@ -9,12 +9,6 @@ function App() {
 
   const [page, setPage] = useState('list')
 
-  // const handleOnAdd = (count) => {
-  //   if(count > 0 ){
-  //     console.log(`La cantidad agregada es : ${count} `)
-  //   } 
-  // }
-
   return (
     <div className="App">
 
@@ -27,7 +21,6 @@ function App() {
         </Routes>
       </BrowserRouter>
 
-      {/* <Counter stock={10} onAdd={handleOnAdd} initial={1}/> */}
     </div>
   );
 }
