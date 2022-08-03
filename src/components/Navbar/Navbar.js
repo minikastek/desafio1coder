@@ -22,10 +22,10 @@ export const Navbar = () => {
         </div>
 
         <div className="buttonList">
-            <Link to='/category/cartas'>
+            <Link to='/category/carta'>
                 <button className="btn btn-outline-light btn-sm">Singles</button>
             </Link>
-            <Link to='/category/carpetas'>
+            <Link to='/category/carpeta'>
                 <button className="btn btn-outline-light btn-sm">Carpetas</button>
             </Link>
             <Link to='/category/deckbox'>
