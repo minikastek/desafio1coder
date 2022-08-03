@@ -3,7 +3,31 @@
     height: 350px;
     border-style: solid;
     border-radius: 20px 5px 20px 5px;
-    box-shadow: 19px -13px 12px -4px rgba(0,0,0,0.62);
+    box-shadow: 17px -11px 12px -10px rgba(0,0,0,0.62);
     border-color: red;
     text-align: center;
+}
+.header{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    border-radius: 25px;
+}
+.title{
+    display: flex;
+    justify-content: center;
+}
+.img{
+    width: 100px;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.imgItem{
+    width: 100px;
+    height: 200px;
+    margin-left: 40%;
+    object-fit: cover;
+    object-position: center;
 }

@@ -1,7 +1,7 @@
 const products = [
     { 
         id: '1', 
-        name: 'Box Rick and Morty', 
+        name: 'Rick and Morty', 
         price: 1000, 
         category: 'deckbox', 
         img:'https://dojiw2m9tvv09.cloudfront.net/29535/product/14616605169.jpg', 
@@ -60,20 +60,20 @@ const products = [
         description:'Black lotus, la carta mas codiciada por los coleccionistas y la reliquia de Magic The Gathering'
     },
     {   id: '8', 
-        name: 'Pokedex', 
+        name: 'Mox Ruby', 
         price: 1200, 
         category: 'carta', 
-        img:'https://kidshopia.com/wp-content/uploads/2021/05/612BHP3bUzPL._AC_SL1000_.jpg', 
+        img:'https://static.cardkingdom.com/images/magic-the-gathering/alpha/mox-ruby-92712.jpg', 
         stock: 10, 
-        description:'Descripcion '
+        description:'Mox Ruby, parte de las power 9 '
     },
     {   id: '9', 
-        name: 'Pokedex', 
+        name: 'Mox Jet', 
         price: 1200, 
         category: 'carta', 
-        img:'https://kidshopia.com/wp-content/uploads/2021/05/612BHP3bUzPL._AC_SL1000_.jpg', 
+        img:'https://static.cardkingdom.com/images/magic-the-gathering/unlimited/mox-jet-61953.jpg', 
         stock: 10, 
-        description:'Descripcion '
+        description:'Mox jet, parte de las power 9 '
     },
 
 ]
