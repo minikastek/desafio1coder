@@ -1,31 +1,81 @@
 const products = [
     { 
         id: '1', 
-        name: 'iphone 12', 
+        name: 'Box Rick and Morty', 
         price: 1000, 
-        category: 'celular', 
-        img:'https://e7.pngegg.com/pngimages/104/8/png-clipart-apple-iphone-8-64-gb-space-gray-unlocked-gsm-uk-import-smartphone-apple-iphone-8-64gb-space-gray-phone-review-electronics-gadget.png', 
+        category: 'deckbox', 
+        img:'https://dojiw2m9tvv09.cloudfront.net/29535/product/14616605169.jpg', 
         stock: 25, 
-        description:'Descripcion de Iphone 12'
+        description:'Deckbox para un deck con espacio hasta 100 cartas en folios ideal para tu commander!'
     },
     
-    { id: '2', 
-        name: 'samsung s21', 
+    {   id: '2', 
+        name: 'Box UP Pikachu', 
         price: 800, 
-        category: 'celular', 
-        img:'https://cdn.pocket-lint.com/r/s/1200x630/assets/images/155378-phones-review-hands-on-samsung-galaxy-s21-ultra-image1-luae09ici4.JPG', 
+        category: 'deckbox', 
+        img:'https://www.magicsur.cl/1657-large_default/ultra-pro-flip-box-pikachu-pokemon.jpg', 
         stock: 16, 
-        description:'Descripcion de Samsung s21'
+        description:'Deckbox para un deck de hasta 80 cartas en folios, ultra pro de la maxima calidad con tapa magnetica'
     },
 
-    { id: '3', 
-        name: 'Ipad 8va', 
+    {   id: '3', 
+        name: 'Box BlackFire', 
         price: 1200, 
-        category: 'tablet', 
-        img:'https://medias.musimundo.com/medias/00406046-143516-143516-01-143516-01.jpg-size515?context=bWFzdGVyfGltYWdlc3w1MjI1MnxpbWFnZS9qcGVnfGhjMC9oYWMvMTAyODM0OTc0NTU2NDYvMDA0MDYwNDYtMTQzNTE2LTE0MzUxNl8wMS0xNDM1MTZfMDEuanBnX3NpemU1MTV8MzA0NmMzNGFhZjUwMDY2YjY5MjU0MjlkMGJlYWMxODAxZjE5ODJhZmJlOTczZThmZjE2NTQxMjU5NjE2OTA4Yw', 
+        category: 'deckbox', 
+        img:'https://www.totalcards.net/pub/media/catalog/product/b/f/bf03181.jpg', 
         stock: 10, 
-        description:'Descripcion de Ipad'
+        description:'Deckbox para 2 decks de hasta 80 cartas en folios, 160 cartas en total con espacio para dados marca BlackFire la maxima calidad con tapa magnetica'
     },
+
+    {   id: '4', 
+        name: 'Pokedex', 
+        price: 1200, 
+        category: 'carpeta', 
+        img:'https://kidshopia.com/wp-content/uploads/2021/05/612BHP3bUzPL._AC_SL1000_.jpg', 
+        stock: 10, 
+        description:'Descripcion '
+    },
+    {   id: '5', 
+        name: 'Chandra', 
+        price: 1200, 
+        category: 'carpeta', 
+        img:'https://m.media-amazon.com/images/I/715BLAHC0zL._AC_SX425_.jpg', 
+        stock: 10, 
+        description:'La mejor forma de cuidar tus cartas y con estilo '
+    },
+    {   id: '6', 
+        name: 'Clasica', 
+        price: 1200, 
+        category: 'carpeta', 
+        img:'https://http2.mlstatic.com/D_NQ_NP_673146-MLC44832808343_022021-O.jpg', 
+        stock: 10, 
+        description:'Descripcion '
+    },
+    {   id: '7', 
+        name: 'Black Lotus', 
+        price: 1200, 
+        category: 'carta', 
+        img:'https://http2.mlstatic.com/D_NQ_NP_660103-MLA48713894793_122021-W.jpg', 
+        stock: 10, 
+        description:'Black lotus, la carta mas codiciada por los coleccionistas y la reliquia de Magic The Gathering'
+    },
+    {   id: '8', 
+        name: 'Pokedex', 
+        price: 1200, 
+        category: 'carta', 
+        img:'https://kidshopia.com/wp-content/uploads/2021/05/612BHP3bUzPL._AC_SL1000_.jpg', 
+        stock: 10, 
+        description:'Descripcion '
+    },
+    {   id: '9', 
+        name: 'Pokedex', 
+        price: 1200, 
+        category: 'carta', 
+        img:'https://kidshopia.com/wp-content/uploads/2021/05/612BHP3bUzPL._AC_SL1000_.jpg', 
+        stock: 10, 
+        description:'Descripcion '
+    },
+
 ]
 
 export const getProductsDeAlfredo = () => {
