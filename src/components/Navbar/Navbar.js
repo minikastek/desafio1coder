@@ -1,16 +1,10 @@
 import React from 'react';
-import { Button } from '../Button/Button';
 import { CartWidget } from '../CartWidget/CartWidget';
 import { Link } from 'react-router-dom'
 import './Navbar.css';
 import name from "../../Assets/Name.png";
 
 export const Navbar = () => {
-
-    const text = 'hice click'
-    const handleClick= () =>{
-        return console.log(text);
-    }
 
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
