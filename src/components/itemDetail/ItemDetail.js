@@ -44,8 +44,6 @@ export const ItemDetail = ({name,img,id,price,description,stock}) => {
               <Link to='/cart'> Finalizar compra </Link>
             )
           }  
-
-          {/* <Counter stock={stock} onAdd={handleOnAdd} initial={1}/> */}
         </div>
 
         <div className='rightBox'>

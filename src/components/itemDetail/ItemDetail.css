@@ -5,14 +5,19 @@
 
 .leftBox{
     width: 50%;
+    margin: 10%;
     margin-top: 5%;
     text-align: center;
     align-items: 'center';
+    border-style: solid;
+    border-radius: 20px 5px 20px 5px;
+    border-color: red;
 
 }
 
 .rightBox{
     width: 50%;
+    margin: 10%;
     margin-top: 5%;
     text-align: center;
     align-items: 'center';
