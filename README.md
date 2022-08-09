@@ -5,7 +5,7 @@ y muestra en pantalla todos los elementos, el logo tiene la ruta del home.
 
 El objetivo del proyecto es meramente educativa.
 
-## Navigacion
+## Navegacion
 
 https://media.giphy.com/media/Km6GfWDrG7z1Qq9sWa/giphy.gif
 
@@ -14,3 +14,7 @@ Recorremos cada boton en el navbar para filtrar lo que estamos buscando en la we
 ## Como correr el codigo y como ver el funcionamiento 
 
 En el modo desarollador la app corre con npm start, para verlo en tu navegador [http://localhost:3000](http://localhost:3000) 
+
+## Librerias extras que use 
+
+hasta ahora solamente react-router-dom 
