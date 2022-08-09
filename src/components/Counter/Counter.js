@@ -2,23 +2,9 @@ import React from 'react'
 import { useState } from 'react'
 import './Counter.css'
 
-export const Counter = ({stock, onAdd, initial}) => {
+export const Counter = ({stock = 0, initial = 1, onAdd}) => {
 
     const [count, setCount] = useState(initial)
-
-    // const [title, setTitle] = useState('hola')
-
-    // useEffect(() => {
-    //   console.log('el componente se termino de montar')
-
-    //   return () => console.log('Se desmonto el componente')
-    // }, [])
-
-    // useEffect(() => {
-    //   console.log('el titulo cambio')
-    // }, [title])
-    
-    // let count = 10
 
     const increment = () => {
         // count++;
@@ -36,7 +22,6 @@ export const Counter = ({stock, onAdd, initial}) => {
 
   return (
     <div>
-
       <div className='counter'>
         <button onClick={increment}>+</button>
         <h1>{count}</h1>
