@@ -1,11 +1,15 @@
 import React from 'react'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './Counter.css'
 
 export const Counter = ({stock = 0, initial = 1, onAdd}) => {
 
     const [count, setCount] = useState(initial)
 
+    useEffect(() => {
+      setCount(initial)
+    }, [initial])
+    
     const increment = () => {
         // count++;
         if(count<stock){
@@ -23,12 +27,12 @@ export const Counter = ({stock = 0, initial = 1, onAdd}) => {
   return (
     <div>
       <div className='counter'>
-        <button onClick={increment}>+</button>
+        <button onClick={decrement} className="btn btn-secondary" style={{marginLeft: 40}}>-</button>        
         <h1>{count}</h1>
-        <button onClick={decrement}>-</button>
+        <button onClick={increment} className="btn btn-secondary" style={{marginRight: 40}}>+</button>
       </div>
 
-        <button onClick={()=> onAdd(count)}>Agregar al carrito</button>
+        <button onClick={()=> onAdd(count)} className="btn btn-success">Agregar al carrito</button>
     </div>
   )
 }

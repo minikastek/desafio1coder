@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { Counter } from '../Counter/Counter'
 import './ItemDetail.css' 
 import CartContext from '../CartContext/CartContext'
+import NotificationContext from '../../notification/Notification'
 
 
 export const ItemDetail = ({name,img,id,price,description,stock}) => {
@@ -41,7 +42,7 @@ export const ItemDetail = ({name,img,id,price,description,stock}) => {
             quantity === 0 ? (
               <Counter stock={stock} onAdd={handleOnAdd} initial={productQuantity}/>
             ) : (
-              <Link to='/cart'> Finalizar compra </Link>
+              <Link to='/cart' className='btn btn-primary'> Finalizar compra </Link>
             )
           }  
         </div>
