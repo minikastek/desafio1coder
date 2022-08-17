@@ -26,7 +26,7 @@ export const CartContextProvider = ({children}) => {
     }
   }
 
-  const clearCart = () => {
+const clearCart = () => {
     setCart([])
 }
 
