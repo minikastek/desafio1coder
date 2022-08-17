@@ -10,6 +10,7 @@ export const ItemDetail = ({name,img,id,price,description,stock}) => {
 
   const [quantity, setQuantity] = useState(0)
   const { addItem, getProductQuantity } = useContext(CartContext)
+  const { setNotification } = useContext(NotificationContext)
 
   const handleOnAdd = (quantity) => {
 
@@ -22,6 +23,7 @@ export const ItemDetail = ({name,img,id,price,description,stock}) => {
       }
 
       addItem(producToAdd)
+      setNotification('success', `Se agregaron ${quantity} de ${name}`)
     }
   }
 
@@ -32,10 +34,11 @@ export const ItemDetail = ({name,img,id,price,description,stock}) => {
       <div className='bigBox'>
 
         <div className='leftBox'>
-          <h1>{name}</h1>
+          <h1 style={{marginTop:20}}>{name}</h1>
           <img src={img}
               style={{
-                width: '50%',  
+                width: '50%', 
+                marginTop: 20, 
               }}
           />
           {

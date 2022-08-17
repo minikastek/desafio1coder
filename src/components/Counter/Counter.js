@@ -26,13 +26,13 @@ export const Counter = ({stock = 0, initial = 1, onAdd}) => {
 
   return (
     <div>
-      <div className='counter'>
-        <button onClick={decrement} className="btn btn-secondary" style={{marginLeft: 40}}>-</button>        
+      <div className='counter'style={{margin: 40}}>
+        <button onClick={decrement} className="btn btn-secondary" >-</button>        
         <h1>{count}</h1>
-        <button onClick={increment} className="btn btn-secondary" style={{marginRight: 40}}>+</button>
+        <button onClick={increment} className="btn btn-secondary" >+</button>
       </div>
 
-        <button onClick={()=> onAdd(count)} className="btn btn-success">Agregar al carrito</button>
+      <button onClick={()=> onAdd(count)} className="btn btn-success" style={{marginBottom: 40}}>Agregar al carrito</button>
     </div>
   )
 }

@@ -1,6 +1,5 @@
-import React, { Children } from 'react'
+import React from 'react'
 import { createContext, useState} from 'react'
-import './Notification.css'
 
 function Notificacion({severity,message}){
 
@@ -12,13 +11,18 @@ function Notificacion({severity,message}){
     }
   
     const notificacionStyle= {
+      position: 'absolute',
+      top: 100,
+      right: 10,
+      padding: '10px 20px 10px 20px',
+      color: 'white',
       backgroundColor: background[severity] || background.default
     }
   
     if(message === '') return
 
     return (
-      <div style= {notificacionStyle}>
+      <div style={notificacionStyle}>
         <h1>{message}</h1>
       </div>
     )
@@ -28,10 +32,10 @@ const NotificationContext = createContext()
 
 export const NotificationProvider = ({children}) => {
     
-    const [message, setMessage] =useState ('mensaje inicial')
-    const [severity, setSeverity] = useState ('error')
+    const [message, setMessage] = useState ('')
+    const [severity, setSeverity] = useState ('success')
 
-    const setNotificacion=(sev,msg) =>{
+    const setNotification=(sev,msg) =>{
         setMessage(msg)
         setSeverity(sev)
         setTimeout(()=>{
@@ -40,10 +44,12 @@ export const NotificationProvider = ({children}) => {
     }
 
      return (
-        <NotificationContext.Provider value = {{setNotificacion}}>
+        <NotificationContext.Provider value = {{setNotification}}>
             <Notificacion message= { message } severity = {severity}/>
             {children}
         </NotificationContext.Provider>
     )
 
 }
+
+export default NotificationContext;
