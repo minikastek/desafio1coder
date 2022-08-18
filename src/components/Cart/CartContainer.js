@@ -1,19 +1,22 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useContext } from 'react'
 import './Cart.css'
 import { Table } from "react-bootstrap";
 import CartContext from '../CartContext/CartContext'
 import { Link } from 'react-router-dom';
 import carritoVacio from '../../Assets/carritoVacio.png'
+import NotificationContext from '../../notification/Notification'
 
 export const CartContainer = () => {
 
   const { cart,removeItem,clearCart  } = useContext(CartContext);
+  const { setNotification } = useContext(NotificationContext)
 
   const totalProd = (quantity,price) => {
     let accu = 0;
     accu = quantity * price;
     return accu
   }
+  
   const total = (cart) => {
     let accuTotal = 0;
     cart.map((prod) => {
@@ -21,6 +24,12 @@ export const CartContainer = () => {
     })
     return accuTotal
   }
+
+
+  // const handleQuantity = (cart,id,dif) = {
+  //   cart.map((prod) => {
+  //   })
+  // }
 
   return (
     <div>
@@ -44,13 +53,16 @@ export const CartContainer = () => {
             </thead>
             <tbody>
               {cart.map((prod) => (
-                <tr>
+                <tr key={prod.id}>
                   <td>{prod.name}</td>
                   <td>{prod.quantity}</td>
                   <td>${prod.price}</td>
                   <td>${totalProd(prod.quantity,prod.price)}</td>
-                  <td><button className='btn btn-info' >Editar Cantidad</button></td>
-                  <td><button className='btn btn-danger' id={prod.id} onClick={() => removeItem(prod.id) }  >Eliminar</button></td>
+                  <td>
+                    <button className='btn' id={prod.id} >-</button>
+                    <button className='btn' id={prod.id} >+</button>
+                  </td>
+                  <td><button className='btn btn-danger' id={prod.id} onClick={() => removeItem(prod.id)}>Eliminar</button></td>
                 </tr>
               ))}
 

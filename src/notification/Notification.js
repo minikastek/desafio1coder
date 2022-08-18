@@ -15,6 +15,7 @@ function Notificacion({severity,message}){
       top: 100,
       right: 10,
       padding: '10px 20px 10px 20px',
+      borderRadius: '10px 10px 10px 10px',
       color: 'white',
       backgroundColor: background[severity] || background.default
     }

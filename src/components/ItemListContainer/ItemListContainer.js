@@ -6,7 +6,7 @@ import { useParams } from 'react-router-dom'
 import {getDocs, collection, query, where} from 'firebase/firestore'
 import {db} from '../../service/firebase'
 
-export const ItemListContainer = ({greetings}) => {
+export const ItemListContainer = () => {
 
   const [products, setProducts] = useState([])
   const [loading, setLoading] = useState([false])
@@ -45,12 +45,19 @@ export const ItemListContainer = ({greetings}) => {
   }, [categoryId])
 
   if(loading){
-    return <h1>Cargando productos...</h1>
+    return (
+    <div>  
+        <div className="spinner-container">
+            <div className="loading-spinner">
+            </div>
+        </div>
+    </div> 
+    )
   }
 
   return (
     <div>
-        <h1>{greetings}</h1>
+        <h1 className='titulo'>Productos filtrado</h1>
         <ItemList products={products}/>
     </div>
   )

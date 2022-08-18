@@ -38,14 +38,25 @@ export const ItemDetail = ({name,img,id,price,description,stock}) => {
           <img src={img}
               style={{
                 width: '50%', 
-                marginTop: 20, 
+                marginTop: 20,
+                marginLeft: '25%' 
               }}
           />
           {
             quantity === 0 ? (
               <Counter stock={stock} onAdd={handleOnAdd} initial={productQuantity}/>
             ) : (
-              <Link to='/cart' className='btn btn-primary'> Finalizar compra </Link>
+              <Link to='/cart' 
+                className='btn btn-primary' 
+                style={{
+                  marginTop: 30, 
+                  marginBottom: 20,
+                  width: '50%', 
+                  alignSelf: 'center'
+                  
+                }}> 
+                Finalizar compra 
+              </Link>
             )
           }  
         </div>
