@@ -1,10 +1,13 @@
-import React from 'react';
+import React,{useContext} from 'react';
 import { CartWidget } from '../CartWidget/CartWidget';
 import { Link } from 'react-router-dom'
 import './Navbar.css';
 import name from "../../Assets/Name.png";
+import CartContext from '../CartContext/CartContext'
 
 export const Navbar = () => {
+
+    const {cart} = useContext(CartContext)
 
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -33,6 +36,7 @@ export const Navbar = () => {
         <div>
             <CartWidget/>
         </div>
+
 
         {/* <div>
             <button 

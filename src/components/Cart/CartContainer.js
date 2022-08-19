@@ -35,7 +35,7 @@ export const CartContainer = () => {
     <div>
 
       <div>
-        <h1>{cart.length === 0 ? 'Tu carrito esta muy triste, Agrega algo!' :  'Listado de tus productos'}</h1>
+        <h1 className='titulo'>{cart.length === 0 ? 'Tu carrito esta muy triste, Agrega algo!' :  'Listado de tus productos'}</h1>
       </div>
 
       <div>
@@ -80,11 +80,20 @@ export const CartContainer = () => {
 
             {
               cart.length === 0 && 
+
               <div>
-                <img src={carritoVacio}/>
-                <Link to='/'>
-                  <button className='btn btn-danger'>Volver a la felicidad</button>
+                <Link to='/' 
+                  className='btn btn-danger' 
+                  style={{
+                    marginLeft: '45%',
+                    marginTop: '2%'
+                  }}>
+                  Volver a la felicidad
                 </Link>
+
+                <div style={{textAlign: 'center', marginTop: '-3%'}}>
+                  <img src={carritoVacio}/>
+                </div>
               </div>
             }
 

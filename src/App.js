@@ -21,7 +21,7 @@ function App() {
               <Route path='/item/:productId' element={<ItemDetailContainer/>}/>
               <Route path='/category/:categoryId' element={<ItemListContainer />}/>
               <Route path='/cart' element={<CartContainer />} greeting='Tu carrito actual'/>
-              <Route path='*' element={<h1><img src={error404} style={{marginTop: '8%'}}/>No deberias estar aqui, no esta listo aun!</h1>}/> 
+              <Route path='*' element={<h1 style={{textAlign: 'center'}}><img src={error404} style={{marginTop: '7%'}}/>No deberias estar aqui !</h1>}/> 
             </Routes>
           </BrowserRouter>
         </CartContextProvider>
