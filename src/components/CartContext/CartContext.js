@@ -56,28 +56,6 @@ const getProductQuantity = (id) => {
     return product?.quantity
 }
 
-// const updateQuantity = (productToModify,dif) => {
-
-//     if(dif<0){
-
-//         const cartUpdate = cart.map ( prod => {
-
-//             if(prod.id === productToModify.id){
-
-//                 const productUpdate={
-//                     ...prod,
-//                     quantity: productToModify.quantity - 1
-//                 }
-
-//                 return productUpdate
-//             }   else    {
-//                 return prod
-//         }})
-
-//         setCart(cartUpdate)
-//     }
-//  }
-
   return (
     <CartContext.Provider value={{ cart, addItem, getQuantity, isInCart, removeItem, clearCart, getProductQuantity}}>
         {children}

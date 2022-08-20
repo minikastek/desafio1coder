@@ -5,6 +5,7 @@ import CartContext from '../CartContext/CartContext'
 import { Link } from 'react-router-dom';
 import carritoVacio from '../../Assets/carritoVacio.png'
 import NotificationContext from '../../notification/Notification'
+import { Checkout } from '../Checkout/Checkout';
 
 export const CartContainer = () => {
 
@@ -96,7 +97,7 @@ export const CartContainer = () => {
                 </div>
               </div>
             }
-
+        <Checkout/>
       </div>
     </div>
   )

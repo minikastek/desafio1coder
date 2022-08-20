@@ -1,7 +1,6 @@
 import './ItemListContainer.css'
 import React, { useEffect, useState } from 'react'
 import { ItemList } from '../itemList/ItemList'
-// import {getProductsDeAlfredo, getProductsByCategory} from '../../AsyncMoc.js'
 import { useParams } from 'react-router-dom'
 import {getDocs, collection, query, where} from 'firebase/firestore'
 import {db} from '../../service/firebase'
@@ -33,15 +32,6 @@ export const ItemListContainer = () => {
     }).finally(()=>{
         setLoading(false)
     })
-
-    // const asyncFunction = categoryId ? getProductsByCategory : getProductsDeAlfredo
-
-    // asyncFunction(categoryId).then(product=>{
-    //     setProducts(product)
-    //     setLoading(false)
-    //   }).catch(error=>{
-    //     console.log(error)
-    //   })
   }, [categoryId])
 
   if(loading){
