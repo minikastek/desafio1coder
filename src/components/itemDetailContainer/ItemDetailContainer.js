@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-// import { getProductsById } from '../../AsyncMoc'
 import { ItemDetail } from '../itemDetail/ItemDetail'
 import { useParams } from 'react-router-dom'
 import './ItemDetailContainer.css'
@@ -26,12 +25,6 @@ export const ItemDetailContainer = ({greetings}) => {
             setLoading(false)
         })
       
-        //  getProductsById(productId)
-        //      .then(product => {
-        //          setProduct (product)
-        //      }).catch(error =>{
-        //          console.log(error)
-        //      })
      }, [productId])
 
      if(loading){

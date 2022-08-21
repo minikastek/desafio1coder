@@ -9,7 +9,7 @@ import { Checkout } from '../Checkout/Checkout';
 
 export const CartContainer = () => {
 
-  const { cart,removeItem,clearCart  } = useContext(CartContext);
+  const { cart,removeItem,clearCart,getTotal } = useContext(CartContext);
   const { setNotification } = useContext(NotificationContext)
 
   const totalProd = (quantity,price) => {
@@ -18,19 +18,6 @@ export const CartContainer = () => {
     return accu
   }
   
-  const total = (cart) => {
-    let accuTotal = 0;
-    cart.map((prod) => {
-      accuTotal += prod.quantity * prod.price
-    })
-    return accuTotal
-  }
-
-
-  // const handleQuantity = (cart,id,dif) = {
-  //   cart.map((prod) => {
-  //   })
-  // }
 
   return (
     <div>
@@ -71,7 +58,7 @@ export const CartContainer = () => {
                 <td>Suma total</td>
                 <td></td>
                 <td></td>
-                <td>$ {total(cart)}</td>
+                <td>$ {getTotal(cart)}</td>
                 <td></td>
                 <td><button className='btn btn-danger' onClick={() => clearCart() } >Eliminar Todo</button></td>
               </tr>
@@ -97,7 +84,8 @@ export const CartContainer = () => {
                 </div>
               </div>
             }
-        <Checkout/>
+
+        <Link to='/checkout' className='btn btn-info'> Orden de compra </Link>
       </div>
     </div>
   )

@@ -28,32 +28,11 @@ export const Navbar = () => {
             <Link to='/category/deckbox'>
                 <button className="btn btn-outline-light btn-sm">Deckbox</button>
             </Link>
-            {/* <Link to='/category/sealed'>
-                <button>Sellado</button>
-            </Link> */}
         </div>
 
         <div>
             <CartWidget/>
         </div>
-
-
-        {/* <div>
-            <button 
-                className='btn btn-primary'
-                style={{margin: 10, padding: 9}}
-            >
-                login
-            </button>
-
-            <button 
-                className='btn btn-primary'
-                style={{margin: 10, padding: 9}}
-            >
-                sign In
-            </button>
-        </div> */}
-
     </nav>
   )
 }

@@ -11,14 +11,12 @@ export const Counter = ({stock = 0, initial = 1, onAdd}) => {
     }, [initial])
     
     const increment = () => {
-        // count++;
         if(count<stock){
           setCount(count+1)
         }
     }
 
     const decrement = () => {
-      // count--;
       if(count>0){
         setCount(count-1)
       }

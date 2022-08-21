@@ -49,6 +49,15 @@ const getQuantity = () => {
     return accu
 }
 
+const getTotal = (cart) => {
+    let accuTotal = 0;
+    cart.map((prod) => {
+      accuTotal += prod.quantity * prod.price
+    })
+    return accuTotal
+  }
+
+
 const getProductQuantity = (id) => {
 
     const product = cart.find(prod => prod.id === id)
@@ -57,7 +66,7 @@ const getProductQuantity = (id) => {
 }
 
   return (
-    <CartContext.Provider value={{ cart, addItem, getQuantity, isInCart, removeItem, clearCart, getProductQuantity}}>
+    <CartContext.Provider value={{ cart, addItem, getQuantity, isInCart, removeItem, clearCart, getProductQuantity,getTotal}}>
         {children}
     </CartContext.Provider>
   )

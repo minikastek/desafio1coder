@@ -2,23 +2,25 @@ import React, { useState, useContext } from 'react'
 import CartContext from '../CartContext/CartContext'
 
 import {db} from '../../service/firebase/index'
-import {addDoc, collection, updateDoc, doc, getDocs, query, where, documentId, writeBatch} from 'firebase/firestore'
+import {addDoc, collection, getDocs, query, where, documentId, writeBatch} from 'firebase/firestore'
 import { useNavigate } from 'react-router-dom'
 
 export const Checkout = () => {
 
     const [isLoading,setisLoading] = useState(false)
-    const [orderCreated, setOrderCreated] = useState()
-    const { cart, getQuantity, getTotal} = useContext(CartContext)
+    const [orderCreated,setOrderCreated] = useState(false)
+
+    const {cart,getQuantity,getTotal,clearCart} = useContext(CartContext)
 
     const totalQuantity= getQuantity()
-    // const total = getTotal()
+    const total = getTotal()
 
     const navigate = useNavigate()
     
     const createOrder = async() => {
 
         setisLoading (true)
+
         try{
             const objOrder = {
                 buyer: {
@@ -27,11 +29,10 @@ export const Checkout = () => {
                     phone: '1237456789',
                     adress: 'Calle vereda 123'
                 },
-                item:[], //cart
-                totalQuantity: 0, //cart
-                total: 0, //cart
+                item: cart, 
+                totalQuantity, 
+                total,
                 date: new Date()
-
             }
     
         
@@ -49,7 +50,7 @@ export const Checkout = () => {
             const dataDoc = doc.data()
             const stockDb = dataDoc.Stock
 
-            const productAddedToCart = cart.find(prod=>prod.id=== doc.id)
+            const productAddedToCart = cart.find(prod => prod.id=== doc.id)
             const prodQuantity = productAddedToCart?.quantity
 
             if (stockDb>= prodQuantity) {
@@ -65,15 +66,23 @@ export const Checkout = () => {
 
             const orderRef = collection(db, 'orders')
             const orderAdded = await addDoc(orderRef, objOrder)
+
+            console.log(`id de la orden : ${orderAdded.id}`)
+            clearCart()
+            setOrderCreated(true)
+            setTimeout(()=>{
+                navigate('/')
+            },3000)
             
         } else {
             console.log('Productos fuera de stock')
+        } 
+    }   catch (error) {
 
-        }} 
-    catch (error) {
         console.log(error)
-    }   
-    finally {
+
+    }   finally {
+
         setisLoading(false)
     }
 }
@@ -90,7 +99,7 @@ export const Checkout = () => {
     <div>
         <h1>Checkout</h1>
         <h2>formulario</h2>
-        <button className="btn btn-primary" onClick={createOrder(cart)}>Checkout</button>
+        <button className="btn btn-primary" onClick={createOrder}>Generar orden</button>
     </div>
   )
 }
