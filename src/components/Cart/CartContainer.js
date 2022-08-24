@@ -27,7 +27,8 @@ export const CartContainer = () => {
       </div>
 
       <div>
-        {cart.length !== 0 &&
+      {
+        cart.length !== 0 &&
           <Table className="table">
             <thead className="thead-dark">
               <tr>
@@ -85,7 +86,10 @@ export const CartContainer = () => {
               </div>
             }
 
-        <Link to='/checkout' className='btn btn-info'> Orden de compra </Link>
+            {
+            cart.length !== 0 &&
+              <Link to='/checkout' className='btn btn-info'> Orden de compra </Link>
+            }
       </div>
     </div>
   )

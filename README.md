@@ -17,4 +17,10 @@ En el modo desarollador la app corre con npm start, para verlo en tu navegador [
 
 ## Librerias extras que use 
 
-hasta ahora solamente react-router-dom 
+-npm i react-router-dom 
+-npm i react-bootstrap
+-npm i formik
+-npm i yup 
+-npm i firebase
+
+## Logo y marca BlackOnyx registrada 

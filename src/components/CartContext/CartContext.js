@@ -49,8 +49,10 @@ const getQuantity = () => {
     return accu
 }
 
-const getTotal = (cart) => {
+const getTotal = () => {
+    
     let accuTotal = 0;
+
     cart.map((prod) => {
       accuTotal += prod.quantity * prod.price
     })
