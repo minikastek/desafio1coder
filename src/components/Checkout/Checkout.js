@@ -1,12 +1,14 @@
 import React, { useState, useContext } from 'react'
-import CartContext from '../CartContext/CartContext'
+import { useNavigate } from 'react-router-dom'
+import { Form, Row, Col } from 'react-bootstrap'
+import { Formik } from 'formik'
+import './Checkout.css'
 
 import {db} from '../../service/firebase/index'
 import {addDoc, collection, getDocs, query, where, documentId, writeBatch} from 'firebase/firestore'
-import { useNavigate } from 'react-router-dom'
-import { Form, Row, Col } from 'react-bootstrap'
+import CartContext from '../CartContext/CartContext'
 import { buyerSchema } from '../../Schemas/buyerSchema'
-import { Formik } from 'formik'
+
 
 export const Checkout = () => {
     
@@ -21,12 +23,13 @@ export const Checkout = () => {
     
     const navigate = useNavigate()
 
-    console.log(buyer)
-    
-    const createOrder = async () => {
+    const createOrder = async (values) => {
 
-         setisLoading (true)
+        setBuyer(values)
+        console.log(buyer)
 
+        setisLoading (true)
+        
          try{
             const objOrder = {
                 buyer: buyer,
@@ -99,7 +102,15 @@ export const Checkout = () => {
      }
  }
      if(isLoading){
-         return <h1> se esta generando tu orden...</h1>
+         return (
+         <div>
+            <h1 className='title'> se esta generando tu orden...</h1>  
+            <div className="spinner-container">
+                <div className="loading-spinner">
+                </div>
+            </div>
+        </div> 
+        )
      }
 
      if(orderCreated) {
@@ -122,12 +133,12 @@ export const Checkout = () => {
             phone: '',
           }}
           onSubmit={(values)=>{
-            setBuyer(values)
-            console.log(values)
+            createOrder(values)
           }}
           validationSchema={buyerSchema}
         >
-          {({values, errors, touched, handleChange, handleSubmit})=>(
+        
+        {({values, errors, touched, handleChange, handleSubmit})=>(
 
         <Form className="px-5" onSubmit={handleSubmit} autoComplete="off">
           <Row>
@@ -238,9 +249,9 @@ export const Checkout = () => {
             </Col>
           </Row>
 
-          <button className="btn btn-primary" type="submit" onClick={createOrder}>Generar orden</button>
+          <button className="btn btn-primary" type="submit" >Generar orden</button>
           
-          {/* <p className="exito">Formulario enviado con exito!</p> */}
+          {/* <p className="exito">Formulario enviado con exito! onClick={createOrder} </p> */}
 
         </Form>
       )}

@@ -21,7 +21,6 @@ export const CartContextProvider = ({children}) => {
                 return prod
         }
     })
-
         setCart(cartUpdate)
     }
   }
