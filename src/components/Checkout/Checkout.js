@@ -14,7 +14,6 @@ export const Checkout = () => {
     
     const [isLoading,setisLoading] = useState(false)
     const [orderCreated,setOrderCreated] = useState(false)
-    const [buyer,setBuyer] = useState()
 
     const {cart,getQuantity,getTotal,clearCart} = useContext(CartContext)
 
@@ -25,14 +24,11 @@ export const Checkout = () => {
 
     const createOrder = async (values) => {
 
-        setBuyer(values)
-        console.log(buyer)
-
         setisLoading (true)
         
          try{
             const objOrder = {
-                buyer: buyer,
+                buyer: values,
                 // {
                 //   name: 'Nico',
                 //   lastName: 'Olivera',
@@ -89,6 +85,7 @@ export const Checkout = () => {
              },3000)
             
         } else {
+
             console.log('Productos fuera de stock')
 
         } 
