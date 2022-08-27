@@ -15,6 +15,7 @@ export const Checkout = () => {
     const [isLoading,setisLoading] = useState(false)
     const [orderCreated,setOrderCreated] = useState(false)
 
+
     const {cart,getQuantity,getTotal,clearCart} = useContext(CartContext)
 
     const totalQuantity= getQuantity()
@@ -29,16 +30,6 @@ export const Checkout = () => {
          try{
             const objOrder = {
                 buyer: values,
-                // {
-                //   name: 'Nico',
-                //   lastName: 'Olivera',
-                //   dni:'123123132' ,
-                //   province: 'adsdasasd',
-                //   city: 'aadsads',
-                //   postalCode: '123123',
-                //   adress: 'asdads',
-                //   phone: '132213',
-                // },
                 items: cart, 
                 totalQuantity, 
                 total,
@@ -86,7 +77,7 @@ export const Checkout = () => {
             
         } else {
 
-            console.log('Productos fuera de stock')
+          console.log('Productos fuera de stock')
 
         } 
     }   catch (error) {
@@ -111,7 +102,12 @@ export const Checkout = () => {
      }
 
      if(orderCreated) {
-         return <h1>se creo la orden</h1>
+         return (
+          <div>
+            <h1 className='title'>Se creo la orden</h1>
+            <p></p>
+          </div>
+         )
      }
 
   return (

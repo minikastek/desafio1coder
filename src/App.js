@@ -8,6 +8,7 @@ import {NotificationProvider} from './notification/Notification'
 import {CartContainer} from '../src/components/Cart/CartContainer'
 import error404 from '../src/Assets/enconstruccion.png'
 import {Checkout} from './components/Checkout/Checkout';
+import { Footer } from './components/Footer/Footer';
 
 function App() {
 
@@ -25,6 +26,7 @@ function App() {
               <Route path='/checkout' element={<Checkout/>}/>
               <Route path='*' element={<h1 style={{textAlign: 'center'}}><img src={error404} style={{marginTop: '7%'}}/>No deberias estar aqui !</h1>}/> 
             </Routes>
+            <Footer/>
           </BrowserRouter>
         </CartContextProvider>
       </NotificationProvider>
