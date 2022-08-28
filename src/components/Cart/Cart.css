@@ -3,6 +3,12 @@
     margin: 20px;
 }
 
+.center{
+    justify-content: center;
+    text-align: center;
+}
+
 .footer{
     margin-bottom: 15%
 }
+

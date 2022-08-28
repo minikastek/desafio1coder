@@ -5,7 +5,6 @@ import CartContext from '../CartContext/CartContext'
 import { Link } from 'react-router-dom';
 import carritoVacio from '../../Assets/carritoVacio.png'
 import NotificationContext from '../../notification/Notification'
-import { Checkout } from '../Checkout/Checkout';
 
 export const CartContainer = () => {
 
@@ -71,18 +70,16 @@ export const CartContainer = () => {
               cart.length === 0 && 
 
               <div>
-                <Link to='/' 
-                  className='btn btn-danger' 
-                  style={{
-                    marginLeft: '45%',
-                    marginTop: '2%'
-                  }}>
-                  Volver a la felicidad
-                </Link>
-
+                
                 <div style={{textAlign: 'center', marginTop: '-3%'}}>
                   <img src={carritoVacio}/>
                 </div>
+
+                <Link to='/' 
+                  className='btn btn-danger' 
+                >
+                  Volver a la felicidad
+                </Link>
               </div>
             }
 

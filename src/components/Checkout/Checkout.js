@@ -112,7 +112,7 @@ export const Checkout = () => {
 
   return (
     <div>
-        <h1>Formulario para envio</h1>
+        <h1 className='title'>Formulario para envio</h1>
 
         <Formik
           initialValues={{
@@ -242,7 +242,9 @@ export const Checkout = () => {
             </Col>
           </Row>
 
-          <button className="btn btn-primary" type="submit" >Generar orden</button>
+          <div className='footer'>
+            <button className="btn btn-success" type="submit" >Generar orden</button>
+          </div>
           
         </Form>
       )}

@@ -5,9 +5,14 @@
     align-items: right;
     margin-left: auto;
     padding-right: 20px;
+    
 }
 
 .logo{
     width: 80px;
     margin-left: 40%;
+}
+
+.button{
+    margin-right: 10px;
 }
