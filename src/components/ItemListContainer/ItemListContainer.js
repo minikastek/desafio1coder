@@ -4,6 +4,7 @@ import ItemList from '../itemList/ItemList'
 import { useParams } from 'react-router-dom'
 import {getDocs, collection, query, where} from 'firebase/firestore'
 import {db} from '../../service/firebase'
+import logoBackground from "../../Assets/logoTransparente.png";
 
 export const ItemListContainer = () => {
 
@@ -47,8 +48,10 @@ export const ItemListContainer = () => {
 
   return (
     <div>
+      <div style={{ backgroundImage: `url(${logoBackground})`, backgroundRepeat:'no-repeat', backgroundPosition: 'center' }}>
         <h1 className='titulo'>Productos filtrado</h1>
         <ItemList products={products}/>
+      </div>
     </div>
   )
 }

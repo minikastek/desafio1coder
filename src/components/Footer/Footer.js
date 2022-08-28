@@ -7,7 +7,7 @@ import logoBlackOnyx from "../../Assets/BB.png";
 
 export const Footer = () => {
   return (
-      <div className=".container-fluid">
+      <div className=".container-fluid" >
           <div className="text-white bg-dark">
               <div className="p-4 pb-0">
 
@@ -38,28 +38,28 @@ export const Footer = () => {
   
                               <Link
                                   to="/category/carta"
-                                  className="nav-link" 
+                                  className="nav-link categories"
                               >
-                                  singles
+                                  Singles
                               </Link>
   
                               <Link
                                   to="/category/carpeta"
-                                  className="nav-link"
+                                  className="nav-link categories"
                               >
                                   Carpetas
                               </Link>
   
                               <Link
                                   to="/category/deckbox"
-                                  className="nav-link"
+                                  className="nav-link categories"
                               >
                                   Deckbox
                               </Link>
   
                               <Link
                                   to="/"
-                                  className="nav-link"
+                                  className="nav-link categories" 
                               >
                                   inicio
                               </Link>

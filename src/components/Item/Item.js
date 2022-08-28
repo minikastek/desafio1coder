@@ -24,7 +24,7 @@ export const Item = ({products}) => {
                 <div className="others">
                     <h3>$ {products.price}</h3>
                     <Link to={`/item/${products.id}`}>
-                        <button className="btn btn-info">Ver detalle</button>
+                        <button className="btn btn-secondary">Ver detalle</button>
                     </Link>
                 </div>
             </div>

@@ -88,7 +88,9 @@ export const CartContainer = () => {
 
             {
             cart.length !== 0 &&
-              <Link to='/checkout' className='btn btn-info'> Orden de compra </Link>
+            <div className='footer'>
+              <Link to='/checkout' className='btn btn-secondary'> Orden de compra </Link>
+            </div>
             }
       </div>
     </div>

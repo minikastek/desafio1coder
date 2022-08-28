@@ -2,10 +2,11 @@
     width: 250px;
     height: 350px;
     border-style: solid;
-    border-radius: 20px 5px 20px 5px;
+    border-radius: 40px 1px 20px 1px;
     box-shadow: 17px -11px 12px -10px rgba(0,0,0,0.62);
     border-color: red;
     text-align: center;
+    background-color: rgba(255,255,255,0.7);
 }
 .header{
     display: flex;
@@ -22,6 +23,7 @@
     height: 200px;
     object-fit: cover;
     object-position: center;
+    
 }
 
 .imgItem{
@@ -30,4 +32,8 @@
     margin-left: 40%;
     object-fit: cover;
     object-position: center;
+}
+
+.others{
+    margin-top: 10px;
 }

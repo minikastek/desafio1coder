@@ -244,8 +244,6 @@ export const Checkout = () => {
 
           <button className="btn btn-primary" type="submit" >Generar orden</button>
           
-          {/* <p className="exito">Formulario enviado con exito! onClick={createOrder} </p> */}
-
         </Form>
       )}
       </Formik>   
