@@ -4,12 +4,10 @@ import { Table } from "react-bootstrap";
 import CartContext from '../CartContext/CartContext'
 import { Link } from 'react-router-dom';
 import carritoVacio from '../../Assets/carritoVacio.png'
-import NotificationContext from '../../notification/Notification'
 
 export const CartContainer = () => {
 
   const { cart,removeItem,clearCart,getTotal } = useContext(CartContext);
-  const { setNotification } = useContext(NotificationContext)
 
   const totalProd = (quantity,price) => {
     let accu = 0;
@@ -73,13 +71,15 @@ export const CartContainer = () => {
                 
                 <div style={{textAlign: 'center', marginTop: '-3%'}}>
                   <img src={carritoVacio}/>
+                  <Link to='/' 
+                      className='btn btn-danger'
+
+                  >
+                   Volver a la felicidad 
+                  </Link>
                 </div>
 
-                <Link to='/' 
-                  className='btn btn-danger' 
-                >
-                  Volver a la felicidad
-                </Link>
+                
               </div>
             }
 

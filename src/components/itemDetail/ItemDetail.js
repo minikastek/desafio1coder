@@ -62,7 +62,7 @@ export const ItemDetail = ({name,img,id,price,description,stock}) => {
         </div>
 
         <div className='rightBox'>
-          <h1>Descripcion del producto</h1>
+          <h1>Descripción del producto</h1>
           <p>{description}</p>
           <h1>${price}</h1>
         </div>

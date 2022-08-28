@@ -7,6 +7,7 @@ import './Checkout.css'
 import {db} from '../../service/firebase/index'
 import {addDoc, collection, getDocs, query, where, documentId, writeBatch} from 'firebase/firestore'
 import CartContext from '../CartContext/CartContext'
+import NotificationContext from '../../notification/Notification'
 import { buyerSchema } from '../../Schemas/buyerSchema'
 
 
@@ -15,6 +16,7 @@ export const Checkout = () => {
     const [isLoading,setisLoading] = useState(false)
     const [orderCreated,setOrderCreated] = useState(false)
 
+    const { setNotification } = useContext(NotificationContext)
 
     const {cart,getQuantity,getTotal,clearCart} = useContext(CartContext)
 
@@ -67,7 +69,7 @@ export const Checkout = () => {
             const orderRef = collection(db, 'orders')
             const orderAdded = await addDoc(orderRef, objOrder)
 
-            console.log(`id de la orden : ${orderAdded.id}`)
+            setNotification('success', `Se genero la orden con el ID : ${orderAdded.id}`)
 
             clearCart()
             setOrderCreated(true)
@@ -77,7 +79,7 @@ export const Checkout = () => {
             
         } else {
 
-          console.log('Productos fuera de stock')
+          setNotification('error', `Hay un item que no esta es stock`)
 
         } 
     }   catch (error) {
