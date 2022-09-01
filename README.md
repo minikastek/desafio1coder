@@ -19,11 +19,11 @@ validado en formik y yup
 
 ## Organizacion del proyecto
 
-El proyecto esta organizado en una carpeta general llamada "src" dentro de ella encontraremos 4 carpetas importantes:  
+El proyecto esta organizado en una carpeta general llamada "src" dentro de ella encontraremos 3 carpetas importantes:  
 -Assets, es el lugar donde dejaremos todos los elementos estaticos como imagenes o logos 
 -Service, en esta carpeta tendremos las referencias a la base de datos, con sus propias configuraciones y funciones
--Hooks, el lugar donde tendremos los custome hooks que desarollemos
 -Components, donde tendremos todos los componentes de nuestro proyecto, en la carpeta de cada uno de los componentes, en caso de ser necesario tendran su propio archivo .css para sus respectivos estilos
+
 
 ## Como correr el codigo y como ver el funcionamiento 
 
