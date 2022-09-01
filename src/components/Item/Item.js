@@ -10,7 +10,7 @@ export const Item = ({products}) => {
                 <div className="Header">
                     <h3 className="title">{products.name}</h3>
                 </div>
-                <div className="img">
+                <div className="imgContainer">
                     <img 
                         src={products.img} 
                         alt={products.name}

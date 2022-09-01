@@ -18,13 +18,12 @@
     display: flex;
     justify-content: center;
 }
-.img{
+.imgContainer{
     width: 100px;
     height: 200px;
     object-fit: cover;
-    object-position: center;
-    
-}
+    object-position: center; 
+} 
 
 .imgItem{
     width: 100px;
@@ -33,6 +32,12 @@
     object-fit: cover;
     object-position: center;
 }
+
+.imgItem:hover {
+    filter: saturate(180%);
+    transform:scale(0.9);
+    transition:all .5s ease-in-out;
+} 
 
 .others{
     margin-top: 10px;
